@@ -68,6 +68,24 @@ section p {
   text-align: center;
 }
 
+.seperator {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  direction: ltr;
+  height: 40px;
+  z-index: 1;
+}
+
+.invert {
+  transform: rotate(180deg);
+}
+
+.fill-white {
+  fill: #ffffff;
+}
+
 @media (max-width: 800px) {
   section {
     padding: 50px 20px;
