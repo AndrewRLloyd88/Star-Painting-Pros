@@ -31,7 +31,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 100px 80px;
+  padding: 0px 80px;
 }
 
 section:not(.hero):nth-child(even) {
@@ -55,7 +55,7 @@ hr {
 
 section h3.title {
   text-transform: capitalize;
-  font: bold 32px 'Open Sans', sans-serif;
+  font: bold 32px;
   margin-bottom: 30px;
   text-align: center;
 }
@@ -68,6 +68,7 @@ section p {
   text-align: center;
 }
 
+/* Paint Seperator in Header*/
 .seperator {
   width: 100%;
   position: absolute;
@@ -158,7 +159,7 @@ header {
   animation: 1s fadein 0.5s forwards;
   opacity: 0;
   color: #fff;
-  z-index: 1;
+  z-index: 2;
 }
 
 @keyframes fadein {
@@ -189,7 +190,7 @@ header nav .menu li {
 
 @media (max-width: 800px) {
   header {
-    padding: 20px 50px;
+    padding: 20px 0px;
     flex-direction: column;
   }
 
@@ -203,9 +204,11 @@ header nav .menu li {
 .hero {
   position: relative;
   justify-content: center;
+  align-items: center;
   text-align: center;
-  min-height: 100vh;
+  height: 800px;
   color: #4a4a4a;
+  z-index: 1;
 }
 
 .hero .opacity {
@@ -231,13 +234,19 @@ header nav .menu li {
 }
 
 .hero h1 {
-  font: bold 60px 'Open Sans', sans-serif;
+  font: bold 60px 'lato', sans-serif;
+  margin-top: 0px;
   margin-bottom: 15px;
+  font-weight: 900;
+  line-height: 1.2;
 }
 
 .hero h3 {
-  font: normal 28px 'Open Sans', sans-serif;
+  /* font: normal 28px 'Open Sans', sans-serif; */
   margin-bottom: 40px;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.6;
 }
 
 .hero a.btn {
@@ -248,6 +257,7 @@ header nav .menu li {
   opacity: 0;
   margin-top: 100px;
   animation: 1s slidefade 1s forwards;
+  max-width: 800px;
 }
 
 @keyframes slidefade {
@@ -273,4 +283,62 @@ header nav .menu li {
   .hero a.btn {
     padding: 15px 40px;
   }
+}
+
+/* Service Types & Widgets */
+
+main {
+  padding: 120px 0;
+  position: relative;
+  display: block;
+  z-index: 2;
+}
+
+main .servicetypes {
+  padding-right: 60px;
+  padding-left: 60px;
+  max-width: 1520px;
+  margin-top: -280px;
+}
+
+.servicetypes .grid {
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding-right: 60px;
+  padding-left: 60px;
+  max-width: 1520px;
+}
+.grid .widget {
+  display: flex;
+  flex-basis: 33.333%;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  align-items: center;
+  margin: 0 20px;
+  padding: 30px 40px 30px 40px;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.15);
+  align-content: center;
+  background-color: #ffffff;
+}
+
+.grid .widget img {
+  width: 86px;
+  height: 86px;
+}
+
+.grid .widget .title {
+  font-size: 28px;
+  font-family: 'lato';
+  font-weight: 600;
+  line-height: 1.5;
+  color: #080708;
+  margin-bottom: 0;
+}
+
+.grid .widget p.description {
+  font-weight: 400;
+  line-height: 1.8;
+  color: #363537;
+  font-size: 18px;
 }
